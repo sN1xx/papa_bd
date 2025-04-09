@@ -52,7 +52,7 @@ function spin() {
             winning_prize_text = 'Конфета';
         } else {
             winningPrize = thirdAttemptPrize;
-            winning_prize_text = 'Главный приз - 4000 рублей';
+            winning_prize_text = 'Главный приз - 7000 рублей';
         }
 
         const winningIndex = prizes.indexOf(winningPrize);
