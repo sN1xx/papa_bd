@@ -20,7 +20,7 @@ let rotationAngle = 0;
 // Определенные призы для каждой попытки
 const firstAttemptPrize = '1 рубль';
 const secondAttemptPrize = 'Банан';
-const thirdAttemptPrize = 'Главный приз - 5000 рублей';
+const thirdAttemptPrize = 'Главный приз - 4000 рублей';
 
 function drawWheel() {
     for (let i = 0; i < prizes.length; i++) {
