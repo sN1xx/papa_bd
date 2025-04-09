@@ -18,8 +18,8 @@ let rotationAngle = 0;
 
 
 // Определенные призы для каждой попытки
-const firstAttemptPrize = '10 рублей';
-const secondAttemptPrize = 'Конфета';
+const firstAttemptPrize = '1 рубль';
+const secondAttemptPrize = 'Банан';
 const thirdAttemptPrize = 'Главный приз - 5000 рублей';
 
 function drawWheel() {
@@ -46,15 +46,18 @@ function spin() {
 
         if (attempts === 3) {
             winningPrize = firstAttemptPrize;
+            winning_prize_text = '10 рублей';
         } else if (attempts === 2) {
             winningPrize = secondAttemptPrize;
+            winning_prize_text = 'Конфета';
         } else {
             winningPrize = thirdAttemptPrize;
+            winning_prize_text = 'Главный приз - 5000 рублей';
         }
 
         const winningIndex = prizes.indexOf(winningPrize);
         const targetRotation = 360 * 5 + winningIndex * (360 / prizes.length); // Вращаем на 5 полных оборотов + нужный сектор
-        const animationDuration = 6000; // 5 секунд на анимацию
+        const animationDuration = 5000; // 5 секунд на анимацию
 
         let start = null;
         function animate(timestamp) {
@@ -68,7 +71,7 @@ function spin() {
             if (progress < animationDuration) {
                 requestAnimationFrame(animate);
             } else {
-                resultDiv.textContent = `Вы выиграли: ${winningPrize}!`;
+                resultDiv.textContent = `Вы выиграли: ${winning_prize_text}!`;
             }
         }
 
